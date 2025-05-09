@@ -1,0 +1,124 @@
+<div class="flex flex-col md:flex-row p-4 gap-6">
+    <!-- Sidebar Filters -->
+    <aside class="w-full md:w-1/4 bg-white p-4 rounded-2xl shadow-md sticky top-4">
+      <h2 class="text-lg font-semibold mb-4">Apartment Finder</h2>
+  
+      <input type="text" placeholder="Search" class="w-full p-2 border rounded-xl mb-4"/>
+  
+      <!-- Availability -->
+      <div class="mb-4">
+        <p class="font-medium mb-1">Availability</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="filter-btn">Available</span>
+          <span class="filter-btn">Reserved</span>
+          <span class="filter-btn">Sold</span>
+        </div>
+      </div>
+  
+      <!-- Type -->
+      <div class="mb-4">
+        <p class="font-medium mb-1">Type</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="filter-btn">1 Bed</span>
+          <span class="filter-btn">2 Bed</span>
+          <span class="filter-btn">3 Bed</span>
+          <span class="filter-btn">1 Bed Suite</span>
+        </div>
+      </div>
+  
+      <!-- View Direction -->
+      <div class="mb-4">
+        <p class="font-medium mb-1">View Direction</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="filter-btn">North</span>
+          <span class="filter-btn">East</span>
+          <span class="filter-btn">South</span>
+          <span class="filter-btn">West</span>
+        </div>
+      </div>
+  
+      <!-- Price Range -->
+      <div class="mb-4">
+        <p class="font-medium mb-1">Price</p>
+        <div class="flex items-center gap-2">
+          <input type="text" placeholder="£100,000" class="input-sm w-1/2"/>
+          <input type="text" placeholder="£1,000,000" class="input-sm w-1/2"/>
+        </div>
+      </div>
+  
+      <!-- Floor Level -->
+      <div class="mb-4">
+        <p class="font-medium mb-1">Floor Level</p>
+        <div class="flex items-center gap-2">
+          <input type="number" placeholder="Min" class="input-sm w-1/2"/>
+          <input type="number" placeholder="Max" class="input-sm w-1/2"/>
+        </div>
+      </div>
+    </aside>
+  
+    <!-- Right Content -->
+    <div class="w-full md:w-3/4">
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-4">
+        <div class="flex gap-4">
+          <span class="dot dot-green"></span> Available
+          <span class="dot dot-yellow"></span> Reserved
+          <span class="dot dot-red"></span> Sold
+        </div>
+  
+        <div class="flex gap-2">
+          <button class="filter-btn">SQFT</button>
+          <button class="filter-btn">Sort by</button>
+          <button class="bg-black text-white px-4 py-2 rounded-xl">Your Favourites</button>
+        </div>
+      </div>
+  
+      <!-- Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse border border-gray-300 rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="table-cell">No.df</th>
+              <th class="table-cell">Building</th>
+              <th class="table-cell">Level</th>
+              <th class="table-cell">Beds</th>
+              <th class="table-cell">SQ M</th>
+              <th class="table-cell">Price</th>
+              <th class="table-cell">View</th>
+              <th class="table-cell">Save</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+                <td class="border px-4 py-2">asd</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2">sfsdf</td>
+                
+                <!-- New Data Cells -->
+                <td class="border px-4 py-2">sfsdf</td>
+                <td class="border px-4 py-2 text-center">
+                    <span *ngIf="apt.saved">❤️</span>
+                    <span *ngIf="!apt.saved">🤍</span>
+                  </td>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- Pagination -->
+      <div class="flex justify-center mt-6 gap-2">
+        <button class="px-3 py-1 border rounded-xl">Prev</button>
+        <button class="px-3 py-1 border rounded-xl bg-black text-white">1</button>
+        <button class="px-3 py-1 border rounded-xl">2</button>
+        <button class="px-3 py-1 border rounded-xl">3</button>
+        <button class="px-3 py-1 border rounded-xl">4</button>
+        <button class="px-3 py-1 border rounded-xl">Next</button>
+      </div>
+    </div>
+  </div>
+  
